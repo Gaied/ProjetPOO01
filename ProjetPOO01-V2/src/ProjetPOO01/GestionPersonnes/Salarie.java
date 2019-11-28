@@ -1,5 +1,7 @@
 package ProjetPOO01.GestionPersonnes;
 
+import java.util.List;
+
 public class Salarie extends Personne implements IClient, IPatron {
 	
 	public String numsecurite;
@@ -54,13 +56,25 @@ public class Salarie extends Personne implements IClient, IPatron {
 	}
 
 	@Override
-	public void paie() {
+	public void paiesalarie() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void paiesalarie() {
+	public void achate(List<Achat> ListAchat) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean paie() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void achat(List<Achat> ListAchat) {
 		// TODO Auto-generated method stub
 		
 	}

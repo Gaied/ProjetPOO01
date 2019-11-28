@@ -1,5 +1,7 @@
 package ProjetPOO01.GestionPersonnes;
 
+import java.util.List;
+
 public class Client extends Personne implements IClient, IFournisseur {
 	
 	public String numClient;
@@ -33,7 +35,8 @@ public class Client extends Personne implements IClient, IFournisseur {
 	}
 
 	@Override
-	public void paie() {
+	public boolean paie() {
+		return false;
 		// TODO Auto-generated method stub
 		
 	}
@@ -44,6 +47,18 @@ public class Client extends Personne implements IClient, IFournisseur {
 
 	public void setNumClient(String numClient) {
 		this.numClient = numClient;
+	}
+
+	@Override
+	public void achate(List<Achat> ListAchat) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void achat(List<Achat> ListAchat) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	
