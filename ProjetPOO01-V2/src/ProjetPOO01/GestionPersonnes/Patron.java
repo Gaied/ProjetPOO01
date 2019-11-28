@@ -51,9 +51,8 @@ public class Patron extends Salarie implements IPatron {
 	}
 
 	@Override
-	public void paie() {
-		// TODO Auto-generated method stub
-		super.paie();
+	public boolean paie() {
+		return super.paie();
 	}
 
 	public Patron(String nom, String prenom, String adresse, String ville, String codepostal, String numsecurite,
