@@ -2,6 +2,8 @@ package ProjetPOO01.GestionPersonnes;
 
 import java.util.List;
 
+import achat.Achat;
+
 public class Fournisseur extends Personne implements IClient, IFournisseur {
 	
 	public String numFournisseur;
@@ -38,13 +40,7 @@ public class Fournisseur extends Personne implements IClient, IFournisseur {
 	}
 
 	@Override
-	public void achete() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void achat(List<Achat> ListAchat) {
+	public void achete(List<Achat> ListAchat) {
 		// TODO Auto-generated method stub
 		
 	}

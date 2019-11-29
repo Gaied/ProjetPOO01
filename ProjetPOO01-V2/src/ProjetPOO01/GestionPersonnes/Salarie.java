@@ -2,7 +2,9 @@ package ProjetPOO01.GestionPersonnes;
 
 import java.util.List;
 
-public class Salarie extends Personne implements IClient, IPatron {
+import achat.Achat;
+
+public class Salarie extends Personne implements IClient {
 	
 	public String numsecurite;
 	public double salaire;
@@ -37,29 +39,6 @@ public class Salarie extends Personne implements IClient, IPatron {
 		return "Salarie []" +super.toString();
 	}
 
-	@Override
-	public void embauche() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void licencie() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void achete() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void paiesalarie() {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public void achate(List<Achat> ListAchat) {
@@ -74,7 +53,7 @@ public class Salarie extends Personne implements IClient, IPatron {
 	}
 
 	@Override
-	public void achat(List<Achat> ListAchat) {
+	public void achete(List<Achat> ListAchat) {
 		// TODO Auto-generated method stub
 		
 	}

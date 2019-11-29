@@ -33,24 +33,6 @@ public class Patron extends Salarie implements IPatron {
 	}
 
 	@Override
-	public void embauche() {
-		// TODO Auto-generated method stub
-		super.embauche();
-	}
-
-	@Override
-	public void licencie() {
-		// TODO Auto-generated method stub
-		super.licencie();
-	}
-
-	@Override
-	public void achete() {
-		// TODO Auto-generated method stub
-		super.achete();
-	}
-
-	@Override
 	public boolean paie() {
 		return super.paie();
 	}
@@ -59,6 +41,24 @@ public class Patron extends Salarie implements IPatron {
 			double salaire) {
 		super(nom, prenom, adresse, ville, codepostal, numsecurite, salaire);
 		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void embauche() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void paiesalarie() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void licencie() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -2,12 +2,14 @@ package ProjetPOO01.GestionPersonnes;
 
 import java.util.List;
 
+import achat.Achat;
+
 public interface IClient {
 	
-	public void  achat(List<Achat> ListAchat);
+	public void  achete(List<Achat> ListAchat);
 	public boolean paie();
 	void achate(List<Achat> ListAchat);
-	void achete();
+	
 
 
 }

@@ -43,7 +43,7 @@ public class Programme {
 		
 		String codepostale = sc.nextLine();
 		try {
-			Programme.ctrlCodePostale(codepostale);
+			Salarie.ctrlCodePostale(codepostale);
 		} catch (ExceptionSaisie e) {
 			// TODO Auto-generated catch block
 			//e.printStackTrace();
@@ -54,7 +54,7 @@ public class Programme {
 		
 		String numsecurite = sc.nextLine();
 		try {
-			Programme.ctrlNumSecu(numsecurite);
+			Salarie.ctrlNumSecu(numsecurite);
 		} catch (ExceptionSaisie e) {
 			// TODO Auto-generated catch block
 			//e.printStackTrace();
@@ -127,33 +127,5 @@ public class Programme {
 		return ListFournisseur;
 	}
 	
-	public static void ctrlCodePostale (String cp) throws ExceptionSaisie {
-		
-		   if (cp.length()!=5) {
-			   
-			  throw  new ExceptionSaisie ("Le nombre de caractère est différent de 5.");	
-			}
-		   try {
-			   Integer.parseInt(cp);
-			
-		} catch (Exception e) {
-			// TODO: handle exception
-			 throw  new ExceptionSaisie ("Il faut saisir uniquement des chiffres");	
-		}
-			}
-	public static void ctrlNumSecu (String nums) throws ExceptionSaisie {
-		
-		   if (nums.length()!=13) {
-			   
-			  throw  new ExceptionSaisie ("Le nombre de caractère est différent de 13.");	
-			}
-		   try {
-			   Integer.parseInt(nums);
-			
-		} catch (Exception e) {
-			// TODO: handle exception
-			 throw  new ExceptionSaisie ("Il faut saisir uniquement des chiffres");
-		}
-			}
 
 }
