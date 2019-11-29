@@ -8,5 +8,6 @@ public interface IClient {
 	
 	public void  achete(List<Achat> ListAchat);
 	public boolean paie();
+	public boolean estClient();
 	
 }

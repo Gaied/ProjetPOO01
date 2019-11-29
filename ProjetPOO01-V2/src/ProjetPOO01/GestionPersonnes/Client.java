@@ -1,5 +1,6 @@
 package ProjetPOO01.GestionPersonnes;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import achat.Achat;
@@ -47,6 +48,31 @@ public class Client extends Personne implements IClient, IFournisseur {
 	@Override
 	public void achete(List<Achat> ListAchat) {
 		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean estClient() {
+		// TODO Auto-generated method stub
+		
+		return false;
+	}
+	
+	public List<IClient> ListClient(){
+		
+		List<IClient> lic = new ArrayList<IClient>();
+		
+		for (IClient c: lic)
+		{
+			if (lic instanceof IClient) {
+				
+				{ if (c.estClient()== true)
+					lic.add((IClient) c);
+				}
+				
+			}
+		}
+		return lic;
 		
 	}
 

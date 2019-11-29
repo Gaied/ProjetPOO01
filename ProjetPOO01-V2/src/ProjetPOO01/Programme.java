@@ -1,6 +1,9 @@
 package ProjetPOO01;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -190,14 +193,23 @@ public class Programme {
 		
 		for(int i=0; i<n ; i++  ) {
 		
-		System.out.println("Veuillez saisir la date d'achat:");
+		System.out.println("Veuillez saisir la date d'achat \"dd/MM/yyyy\"");
 		String date = sc.nextLine();
+        SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy") ;
+        Date dt = null;
+		try {
+			dt = sdf.parse(date);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
 		System.out.println("Veuillez saisir l'intitulé d'achat:");
 		String intitule = sc.nextLine();
 		System.out.println("Veuillez saisir la quantité d'achat:");
 		String qte = sc.nextLine();
 		
-		Achat a = new Achat(date, intitule, qte);
+		Achat a = new Achat(dt, intitule, qte);
 		
 		ListAchat.add(a);
 	    }

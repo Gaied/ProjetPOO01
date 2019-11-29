@@ -1,21 +1,23 @@
 package achat;
 
+import java.util.Date;
+
 public class Achat {
 	
-   public String dateAchat;
+   public Date dateAchat;
    public String intitule;
    public String qte;
    
-public Achat(String dateAchat, String intitule, String qte) {
+public Achat(Date date, String intitule, String qte) {
 	super();
-	this.dateAchat = dateAchat;
+	this.dateAchat = date;
 	this.intitule = intitule;
 	this.qte = qte;
 }
-public String getDateAchat() {
+public Date getDateAchat() {
 	return dateAchat;
 }
-public void setDateAchat(String dateAchat) {
+public void setDateAchat(Date dateAchat) {
 	this.dateAchat = dateAchat;
 }
 public String getIntitule() {

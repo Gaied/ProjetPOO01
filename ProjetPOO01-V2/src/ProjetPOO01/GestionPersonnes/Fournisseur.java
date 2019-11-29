@@ -51,5 +51,12 @@ public class Fournisseur extends Personne implements IClient, IFournisseur {
 		return false;
 	}
 
+	@Override
+	public boolean estClient() {
+		// TODO Auto-generated method stub
+	//if ()
+		return false;
+	}
+
 
 }

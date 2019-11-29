@@ -83,5 +83,11 @@ public class Personne {
 			 throw  new ExceptionSaisie ("Il faut saisir uniquement des chiffres");
 		}
 			}
+
+	public boolean estClient() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
 	
 }

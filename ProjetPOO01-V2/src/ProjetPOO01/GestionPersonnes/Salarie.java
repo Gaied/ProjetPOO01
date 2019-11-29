@@ -49,5 +49,11 @@ public class Salarie extends Personne implements IClient {
 		return "Salarie []" +super.toString();
 	}
 
+	@Override
+	public boolean estClient() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 
 }
