@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import ProjetPOO01.GestionPersonnes.Client;
 import ProjetPOO01.GestionPersonnes.Fournisseur;
+import ProjetPOO01.GestionPersonnes.Patron;
 import ProjetPOO01.GestionPersonnes.Salarie;
 import projetPOOException.ExceptionSaisie;
 
@@ -19,6 +20,9 @@ public class Programme {
 		List<Client> ListClient = Programme.SaisirClient(4);
 		
 		List<Fournisseur> ListFournisseur = Programme.SaisirFournisseur(3);
+		
+		Patron Pr = Programme.SaisirPatron();
+		System.out.println(Pr);
 		
 		System.out.println(ListSalarie);
 		System.out.println(ListClient);
@@ -61,7 +65,7 @@ public class Programme {
 			System.out.println(e.getMessage());
 		}
 				
-		System.out.println("Veuillez saisir le Salaire:");
+		System.out.println("Veuillez saisir le Salaire :");
 		
 		double salaire = sc.nextDouble();
 		
@@ -97,8 +101,7 @@ public class Programme {
 		sc.close();
 		ListClient.add(cl1);
 		 }
-		return ListClient;
-		
+		return ListClient;	
 	}
 	
 	public static List<Fournisseur> SaisirFournisseur(int n) {
@@ -117,6 +120,13 @@ public class Programme {
 		String ville = sc.nextLine();
 		System.out.println("Veuillez saisir le code postal de Fournisseur :");
 		String codepostale = sc.nextLine();
+		try {
+			Salarie.ctrlCodePostale(codepostale);
+		} catch (ExceptionSaisie e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			System.out.println(e.getMessage());
+		}
 		System.out.println("Veuillez saisir le numéro de Fournisseur :");
 		String numfr = sc.nextLine();
 		
@@ -125,6 +135,44 @@ public class Programme {
 		ListFournisseur.add(fr);
 		}
 		return ListFournisseur;
+	}
+	
+	public static Patron SaisirPatron() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Veuillez saisir le nom de Patron :");
+		String nom = sc.nextLine();
+		System.out.println("Veuillez saisir le prénom de Patron  :");
+		String prenom = sc.nextLine();
+		System.out.println("Veuillez saisir l'adresse de Patron  :");
+		String adresse = sc.nextLine();
+		System.out.println("Veuillez saisir la Ville de Patron  :");
+		String ville = sc.nextLine();
+		System.out.println("Veuillez saisir le code postal de Patron :");
+		String codepostale = sc.nextLine();
+		try {
+			Salarie.ctrlCodePostale(codepostale);
+		} catch (ExceptionSaisie e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			System.out.println(e.getMessage());
+		}
+		System.out.println("Veuillez saisir le némuro de sécurité sociale de Patron :");
+		String numsecurite = sc.nextLine();
+		try {
+			Salarie.ctrlNumSecu(numsecurite);
+		} catch (ExceptionSaisie e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			System.out.println(e.getMessage());
+		}
+        System.out.println("Veuillez saisir le Salaire de patron:");
+		double salaire = sc.nextDouble();
+		
+		Patron p = new Patron(nom, prenom, adresse, ville, codepostale, numsecurite, salaire);
+		sc.close();
+		return p;
+		
 	}
 	
 

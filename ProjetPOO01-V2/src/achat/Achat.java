@@ -1,29 +1,31 @@
 package achat;
 
+import java.util.Date;
+
 public class Achat {
 	
-   public String numAchat;
-   public String produit;
-   public String prix;
-   
-public String getNumAchat() {
-	return numAchat;
+   public Date dateAchat;
+   public String intitule;
+   public String qte;
+public Date getDateAchat() {
+	return dateAchat;
 }
-public void setNumAchat(String numAchat) {
-	this.numAchat = numAchat;
+public void setDateAchat(Date dateAchat) {
+	this.dateAchat = dateAchat;
 }
-public String getProduit() {
-	return produit;
+public String getIntitule() {
+	return intitule;
 }
-public void setProduit(String produit) {
-	this.produit = produit;
+public void setIntitule(String intitule) {
+	this.intitule = intitule;
 }
-public String getPrix() {
-	return prix;
+public String getQte() {
+	return qte;
 }
-public void setPrix(String prix) {
-	this.prix = prix;
+public void setQte(String qte) {
+	this.qte = qte;
 }
+
 
 }
 

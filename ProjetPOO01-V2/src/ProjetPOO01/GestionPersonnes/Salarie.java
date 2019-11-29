@@ -32,18 +32,14 @@ public class Salarie extends Personne implements IClient {
 		this.salaire = salaire;
 	}
 
-
-
 	@Override
 	public String toString() {
 		return "Salarie []" +super.toString();
 	}
 
-
 	@Override
 	public void achate(List<Achat> ListAchat) {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub		
 	}
 
 	@Override
