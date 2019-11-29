@@ -33,11 +33,6 @@ public class Salarie extends Personne implements IClient {
 	}
 
 	@Override
-	public String toString() {
-		return "Salarie []" +super.toString();
-	}
-
-	@Override
 	public boolean paie() {
 		// TODO Auto-generated method stub
 		return false;
@@ -48,5 +43,11 @@ public class Salarie extends Personne implements IClient {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	@Override
+	public String toString() {
+		return "Salarie []" +super.toString();
+	}
+
 
 }

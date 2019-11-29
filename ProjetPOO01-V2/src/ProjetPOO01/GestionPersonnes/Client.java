@@ -33,7 +33,6 @@ public class Client extends Personne implements IClient, IFournisseur {
 	@Override
 	public boolean paie() {
 		return false;
-		// TODO Auto-generated method stub
 		
 	}
 

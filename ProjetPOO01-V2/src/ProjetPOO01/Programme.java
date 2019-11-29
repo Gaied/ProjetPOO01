@@ -16,28 +16,30 @@ public class Programme {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub;
 		
-		List<Salarie> ListSalarie = Programme.SaisirSalarie(5);
+		List<Salarie> ListSalarie = Programme.SaisirSalarie(1);
 		
-		List<Client> ListClient = Programme.SaisirClient(4);
+		List<Client> ListClient = Programme.SaisirClient(1);
 		
-		List<Fournisseur> ListFournisseur = Programme.SaisirFournisseur(3);
+		List<Fournisseur> ListFournisseur = Programme.SaisirFournisseur(1);
+		
+		Patron Patron = Programme.SaisirPatron();
 		
 		List<Achat> ListAchat = Programme.saisirAchat(1);
-		
-		Patron Pr = Programme.SaisirPatron();
-		System.out.println(Pr);
 		
 		System.out.println(ListSalarie);
 		System.out.println(ListClient);
 		System.out.println(ListFournisseur);
+		System.out.println(Patron);
 		System.out.println(ListAchat);
 	}
+	public static Scanner sc = new Scanner(System.in);
 	
 	public static List<Salarie> SaisirSalarie(int n) {
 		
 		List<Salarie> ListSalarie = new ArrayList<Salarie>();
-		 
-		Scanner sc = new Scanner(System.in);
+		
+		for(int i=0; i<n ; i++  ) {
+			
 		System.out.println("Veuillez saisir le nom de Salarie :");
 		String nom = sc.nextLine();
 		System.out.println("Veuillez saisir le prénom de Salarie  :");
@@ -76,8 +78,7 @@ public class Programme {
 		Salarie Sal1 = new Salarie(nom, prenom, adresse,ville, codepostale, numsecurite, salaire);
 		
 		ListSalarie.add(Sal1);
-		
-		sc.close();
+		}
 		return ListSalarie;
 		
 		}
@@ -86,8 +87,8 @@ public class Programme {
 		
 		 List<Client> ListClient = new ArrayList<Client>();
 		 
-		 for(int i=0; i<n ; i++  ) {
-		Scanner sc = new Scanner(System.in);
+		 for(int i=0; i<n ; i++ ) {
+
 		System.out.println("Veuillez saisir le nom de Client :");
 		String nom = sc.nextLine();
 		System.out.println("Veuillez saisir le prénom de Client  :");
@@ -98,11 +99,18 @@ public class Programme {
 		String ville = sc.nextLine();
 		System.out.println("Veuillez saisir le code postal de Client :");
 		String codepostale = sc.nextLine();
+		try {
+			Salarie.ctrlCodePostale(codepostale);
+		} catch (ExceptionSaisie e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			System.out.println(e.getMessage());
+		}
 		System.out.println("Veuillez saisir le numéro de Client :");
 		String numClient = sc.nextLine();
 		
 		Client cl1 = new Client(nom, prenom, adresse,ville, codepostale,numClient);
-		sc.close();
+		
 		ListClient.add(cl1);
 		 }
 		return ListClient;	
@@ -113,7 +121,7 @@ public class Programme {
 		List<Fournisseur> ListFournisseur = new ArrayList<Fournisseur>();
 		
 		for(int i=0; i<n ; i++  ) {
-		Scanner sc = new Scanner (System.in);
+		
 		System.out.println("Veuillez saisir le nom de Fournisseur :");
 		String nom =sc.nextLine();
 		System.out.println("Veuillez saisir le prénom de Fournisseur  :");
@@ -135,7 +143,7 @@ public class Programme {
 		String numfr = sc.nextLine();
 		
 		Fournisseur fr = new Fournisseur(nom, prenom, adresse,ville, codepostale,numfr);
-		sc.close();
+		
 		ListFournisseur.add(fr);
 		}
 		return ListFournisseur;
@@ -143,7 +151,6 @@ public class Programme {
 	
 	public static Patron SaisirPatron() {
 		
-		Scanner sc = new Scanner(System.in);
 		System.out.println("Veuillez saisir le nom de Patron :");
 		String nom = sc.nextLine();
 		System.out.println("Veuillez saisir le prénom de Patron  :");
@@ -174,7 +181,6 @@ public class Programme {
 		double salaire = sc.nextDouble();
 		
 		Patron p = new Patron(nom, prenom, adresse, ville, codepostale, numsecurite, salaire);
-		sc.close();
 		return p;
 	}
 	
@@ -183,7 +189,7 @@ public class Programme {
 		List<Achat> ListAchat = new ArrayList<Achat>();
 		
 		for(int i=0; i<n ; i++  ) {
-		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("Veuillez saisir la date d'achat:");
 		String date = sc.nextLine();
 		System.out.println("Veuillez saisir l'intitulé d'achat:");
@@ -192,7 +198,7 @@ public class Programme {
 		String qte = sc.nextLine();
 		
 		Achat a = new Achat(date, intitule, qte);
-		sc.close();
+		
 		ListAchat.add(a);
 	    }
 		return ListAchat;
