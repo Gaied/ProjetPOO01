@@ -8,12 +8,13 @@ import ProjetPOO01.GestionPersonnes.Client;
 import ProjetPOO01.GestionPersonnes.Fournisseur;
 import ProjetPOO01.GestionPersonnes.Patron;
 import ProjetPOO01.GestionPersonnes.Salarie;
+import achat.Achat;
 import projetPOOException.ExceptionSaisie;
 
 public class Programme {
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub;
 		
 		List<Salarie> ListSalarie = Programme.SaisirSalarie(5);
 		
@@ -21,12 +22,15 @@ public class Programme {
 		
 		List<Fournisseur> ListFournisseur = Programme.SaisirFournisseur(3);
 		
+		List<Achat> ListAchat = Programme.saisirAchat(1);
+		
 		Patron Pr = Programme.SaisirPatron();
 		System.out.println(Pr);
 		
 		System.out.println(ListSalarie);
 		System.out.println(ListClient);
-		System.out.println(ListFournisseur);	
+		System.out.println(ListFournisseur);
+		System.out.println(ListAchat);
 	}
 	
 	public static List<Salarie> SaisirSalarie(int n) {
@@ -172,8 +176,27 @@ public class Programme {
 		Patron p = new Patron(nom, prenom, adresse, ville, codepostale, numsecurite, salaire);
 		sc.close();
 		return p;
-		
 	}
 	
+	public static List<Achat> saisirAchat(int n) {
+		
+		List<Achat> ListAchat = new ArrayList<Achat>();
+		
+		for(int i=0; i<n ; i++  ) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Veuillez saisir la date d'achat:");
+		String date = sc.nextLine();
+		System.out.println("Veuillez saisir l'intitulé d'achat:");
+		String intitule = sc.nextLine();
+		System.out.println("Veuillez saisir la quantité d'achat:");
+		String qte = sc.nextLine();
+		
+		Achat a = new Achat(date, intitule, qte);
+		sc.close();
+		ListAchat.add(a);
+	    }
+		return ListAchat;
+		
+	}
 
 }

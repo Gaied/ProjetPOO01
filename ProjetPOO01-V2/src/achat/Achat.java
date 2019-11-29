@@ -1,16 +1,21 @@
 package achat;
 
-import java.util.Date;
-
 public class Achat {
 	
-   public Date dateAchat;
+   public String dateAchat;
    public String intitule;
    public String qte;
-public Date getDateAchat() {
+   
+public Achat(String dateAchat, String intitule, String qte) {
+	super();
+	this.dateAchat = dateAchat;
+	this.intitule = intitule;
+	this.qte = qte;
+}
+public String getDateAchat() {
 	return dateAchat;
 }
-public void setDateAchat(Date dateAchat) {
+public void setDateAchat(String dateAchat) {
 	this.dateAchat = dateAchat;
 }
 public String getIntitule() {
@@ -24,6 +29,10 @@ public String getQte() {
 }
 public void setQte(String qte) {
 	this.qte = qte;
+}
+@Override
+public String toString() {
+	return "Achat [dateAchat=" + dateAchat + ", intitule=" + intitule + ", qte=" + qte + "]";
 }
 
 

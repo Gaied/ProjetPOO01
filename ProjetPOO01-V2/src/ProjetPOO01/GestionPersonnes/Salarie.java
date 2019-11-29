@@ -38,11 +38,6 @@ public class Salarie extends Personne implements IClient {
 	}
 
 	@Override
-	public void achate(List<Achat> ListAchat) {
-		// TODO Auto-generated method stub		
-	}
-
-	@Override
 	public boolean paie() {
 		// TODO Auto-generated method stub
 		return false;

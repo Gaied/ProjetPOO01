@@ -46,12 +46,6 @@ public class Client extends Personne implements IClient, IFournisseur {
 	}
 
 	@Override
-	public void achate(List<Achat> ListAchat) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void achete(List<Achat> ListAchat) {
 		// TODO Auto-generated method stub
 		

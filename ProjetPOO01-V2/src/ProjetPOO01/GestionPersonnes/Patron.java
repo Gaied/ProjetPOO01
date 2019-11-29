@@ -2,6 +2,13 @@ package ProjetPOO01.GestionPersonnes;
 
 public class Patron extends Salarie implements IPatron {
 
+	public Patron(String nom, String prenom, String adresse, String ville, String codepostal, String numsecurite,
+			double salaire) {
+		super(nom, prenom, adresse, ville, codepostal, numsecurite, salaire);
+		// TODO Auto-generated constructor stub
+		this.salaire= salaire;
+	}
+	
 	@Override
 	public String getNumsecurite() {
 		// TODO Auto-generated method stub
@@ -35,12 +42,6 @@ public class Patron extends Salarie implements IPatron {
 	@Override
 	public boolean paie() {
 		return super.paie();
-	}
-
-	public Patron(String nom, String prenom, String adresse, String ville, String codepostal, String numsecurite,
-			double salaire) {
-		super(nom, prenom, adresse, ville, codepostal, numsecurite, salaire);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
