@@ -6,9 +6,9 @@ public class Achat {
 	
    public Date dateAchat;
    public String intitule;
-   public String qte;
+   public int qte;
    
-public Achat(Date date, String intitule, String qte) {
+public Achat(Date date, String intitule, int qte) {
 	super();
 	this.dateAchat = date;
 	this.intitule = intitule;
@@ -26,10 +26,10 @@ public String getIntitule() {
 public void setIntitule(String intitule) {
 	this.intitule = intitule;
 }
-public String getQte() {
+public int getQte() {
 	return qte;
 }
-public void setQte(String qte) {
+public void setQte(int qte) {
 	this.qte = qte;
 }
 @Override
