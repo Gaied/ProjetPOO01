@@ -84,10 +84,6 @@ public class Personne {
 		}
 			}
 
-	public boolean estClient() {
-		// TODO Auto-generated method stub
-		return false;
-	}
 	
 	
 }
